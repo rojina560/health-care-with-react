@@ -1,0 +1,49 @@
+[
+  {"id":"1",
+    "name": "Yoga Mat",
+    "image": "https://i.postimg.cc/zBJhrHpN/yoga-mat.jpg",
+    "title": "Premium Eco-Friendly Yoga Mat",
+    "description": "This premium yoga mat is made from eco-friendly materials, providing excellent grip and support for your yoga practice. It's lightweight and easy to carry, making it perfect for use at home or in the studio.",
+    "price": 49.99
+  },
+  {
+    "id": "2",
+    "name": "Essential Oil Diffuser",
+    "image": "https://i.postimg.cc/wjLRRQGH/essential-oil.jpg",
+    "title": "Ultrasonic Aromatherapy Diffuser",
+    "description": "Create a relaxing atmosphere in your home with this ultrasonic aromatherapy diffuser. Simply add water and your favorite essential oils to enjoy soothing aromas and promote wellness.",
+    "price": 29.99
+  },
+  {
+    "id": "3",
+    "name": "Protein Powder",
+    "image": "https://i.postimg.cc/FR8JJCNr/powder.webp",
+    "title": "Organic Plant-Based Protein Powder",
+    "description": "Fuel your body with clean, organic protein with this plant-based protein powder. Packed with essential amino acids and nutrients, it's perfect for post-workout recovery or as a convenient meal replacement.",
+    "price": 39.99
+  },
+  {
+    "id": "4",
+    "name": "Foam Roller",
+    "image": "https://i.postimg.cc/FR8JJCNr/powder.webp",
+    "title": "High-Density Foam Roller",
+    "description": "Release tension and improve flexibility with this high-density foam roller. Ideal for self-myofascial release and massage therapy, it helps soothe sore muscles and prevent injury.",
+    "price": 19.99
+  },
+  {
+    "id": "5",
+    "name": "Resistance Bands Set",
+    "image": "https://i.ibb.co/4R6qPJ4/resistant-belt.jpg",
+    "title": "Premium Resistance Bands Set",
+    "description": "Achieve a full-body workout anywhere with this premium resistance bands set. Made from durable latex, these bands offer varying resistance levels to suit all fitness levels.",
+    "price": 34.99
+  },
+  {
+    "id": "6",
+    "name": "Herbal Tea Sampler",
+    "image": "https://i.postimg.cc/C5xbjnf7/herbal.jpg",
+    "title": "Organic Herbal Tea Sampler",
+    "description": "Unwind and relax with this organic herbal tea sampler. Featuring a variety of soothing blends, it's perfect for promoting relaxation and overall well-being.",
+    "price": 14.99
+  }
+]
