@@ -1,11 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
 const Navbar = () => {
     const navlinks = (
       <>
-        <div className="flex gap-4 text-xl font-semibold">
+        
           <NavLink
             to={"/"}
             className={({ isActive, isPending }) =>
@@ -15,6 +15,7 @@ const Navbar = () => {
                 ? " text-pink-600 underline "
                 : ""
             }
+            
           >
             {" "}
             Home
@@ -43,7 +44,8 @@ const Navbar = () => {
           >
             Doctors
           </NavLink>
-        </div>
+          
+        
       </>
     );
     return (
@@ -80,13 +82,34 @@ const Navbar = () => {
             </div>
             <a className="btn btn-ghost text-xl">Health-Care</a>
           </div>
-          <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 ">
-                        <div>{navlinks}</div>
+          <div className="navbar-center hidden lg:flex  ">
+            <ul
+              className="menu menu-horizontal px-4  text-xl
+            font-semibold "
+            >
+             {navlinks}
             </ul>
           </div>
-          <div className="navbar-end">
-            <a className="btn">Button</a>
+
+          <div className="navbar-end flex justify-end gap-2">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <Link to={"/login"} className="btn">
+              Sign In
+            </Link>
+            <Link to={"/register"} className="btn">
+              Sign up
+            </Link>
           </div>
         </div>
       </div>

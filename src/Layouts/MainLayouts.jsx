@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Shared/Header/Navbar";
-import Banner from "../Shared/Banner/Banner";
+import Footer from "../Pages/Footer/Footer";
 
 
 const MainLayouts = () => {
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
+            <Footer></Footer>
             
         </div>
     );
