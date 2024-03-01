@@ -12,12 +12,12 @@ const ServicesDetails = () => {
       const findService = services.find(service => service.id === id)
       setService(findService)
     },[id,service])
-   
+    
     
 
     return (
       <div>
-        <ServiceDetalsCard service ={service}></ServiceDetalsCard>
+        <ServiceDetalsCard service={service}></ServiceDetalsCard>
       </div>
     );
 };

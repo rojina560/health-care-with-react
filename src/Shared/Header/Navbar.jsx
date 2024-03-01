@@ -1,52 +1,46 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Pages/AuthProvider/AuthProvider";
 
 
 
 const Navbar = () => {
+  const { logOut, user } = useContext(AuthContext)
+  const handleLogout = () => {
+    logOut()
+    .then()
+      .catch(err => {
+      console.log(err)
+    })
+  }
     const navlinks = (
-      <>
-        
-          <NavLink
-            to={"/"}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? " text-pink-600 underline "
-                : ""
-            }
-            
-          >
-            {" "}
-            Home
-          </NavLink>
-          <NavLink
-            to={"/services"}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? " text-pink-600 underline "
-                : ""
-            }
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to={"/doctors"}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? " text-pink-600 underline "
-                : ""
-            }
-          >
-            Doctors
-          </NavLink>
-          
-        
-      </>
+      <nav className="space-x-4 ">
+        <NavLink
+          to={"/"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-pink-600 underline " : ""
+          }
+        >
+          {" "}
+          Home
+        </NavLink>
+        <NavLink
+          to={"/addservices"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-pink-600 underline " : ""
+          }
+        >
+          Services
+        </NavLink>
+        <NavLink
+          to={"/doctors"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-pink-600 underline " : ""
+          }
+        >
+          Doctors
+        </NavLink>
+      </nav>
     );
     return (
       <div>
@@ -80,6 +74,7 @@ const Navbar = () => {
                 {navlinks}
               </ul>
             </div>
+
             <a className="btn btn-ghost text-xl">Health-Care</a>
           </div>
           <div className="navbar-center hidden lg:flex  ">
@@ -87,11 +82,11 @@ const Navbar = () => {
               className="menu menu-horizontal px-4  text-xl
             font-semibold "
             >
-             {navlinks}
+              {navlinks}
             </ul>
           </div>
 
-          <div className="navbar-end flex justify-end gap-2">
+          <div className=" navbar end flex justify-end gap-2 ">
             <div
               tabIndex={0}
               role="button"
@@ -104,12 +99,16 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            <Link to={"/login"} className="btn">
-              Sign In
-            </Link>
-            <Link to={"/register"} className="btn">
-              Sign up
-            </Link>
+            {user ? (
+              <Link onClick={handleLogout} className="btn">
+                Sign Out
+              </Link>
+            ) : (
+              <Link to={"/login"} className="btn">
+                Sign In
+              </Link>
+            )}
+          
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ const Home = () => {
           <Appointment></Appointment>
         </div>
       </div>
-    );
+    );F
 };
 
 export default Home;
