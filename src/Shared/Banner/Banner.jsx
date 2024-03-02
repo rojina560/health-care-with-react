@@ -1,18 +1,21 @@
 
 import React from 'react';
+import OilPng from '../../assets/essential-oil.jpg'
+import foamRoller from '../../assets/foam-roller (2).jpg'
+import yogaMat from '../../assets/yoga-mat.png'
 
 const Banner = () => {
     return (
       <div className="max-h-96 bg-sky-100">
         <div className="carousel ">
           <div id="item1" className="carousel-item w-full  md:max-h-[500px]">
-            <img src="/src/assets/yoga-mat.png" className=" w-full mx-auto" />
+            <img src={yogaMat} className=" w-full mx-auto" />
           </div>
           <div id="item2" className="carousel-item w-full md:max-h-[500px]">
-            <img src="/src/assets/foam-roller (2).jpg" className="w-full" />
+            <img src={foamRoller} className="w-full" />
           </div>
           <div id="item3" className="carousel-item w-full md:max-h-[500px]">
-            <img src="/src/assets/essential-oil.jpg" className="w-full" />
+            <img src={OilPng} className="w-full" />
           </div>
           <div id="item4" className="carousel-item w-full">
             <img

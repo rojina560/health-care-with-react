@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import Rectangle from '../../assets/Rectangle 4284.png'
 
 
 
@@ -15,7 +15,7 @@ const Appointment = () => {
           <figure>
             <img
               className="w-3/4 md:w-[600px]"
-              src="/src/assets/Rectangle 4284.png"
+              src={Rectangle}
               alt="Album"
             />
           </figure>
